@@ -990,7 +990,7 @@ export default function GustuPricing(){
         </div>
         <div style={{display:"flex",alignItems:"center",gap:8,minWidth:360}}>
           <span style={{color:C.dim,fontSize:10,whiteSpace:"nowrap"}}>Turn Maliyet:</span>
-          <input type="range" min={0.10} max={1.00} step={0.01} value={costCent} onChange={e=>setCostCent(+e.target.value)} style={{flex:1,accentColor:C.red,height:5}}/>
+          <input type="range" min={0.10} max={5.00} step={0.01} value={costCent} onChange={e=>setCostCent(+e.target.value)} style={{flex:1,accentColor:C.red,height:5}}/>
           <input type="number" min={0.01} max={5} step={0.01} value={costCent} onChange={e=>{const v=+e.target.value;if(v>=0.01&&v<=5)setCostCent(v)}} style={{width:52,background:C.bg,border:`1px solid ${C.border}`,borderRadius:4,color:C.red,fontFamily:"monospace",fontWeight:700,fontSize:12,padding:"2px 4px",textAlign:"right"}}/>
           <span style={{color:C.dim,fontSize:10}}>¢</span>
           <span style={{color:C.muted,fontFamily:"monospace",fontSize:10,whiteSpace:"nowrap"}}>(${(costCent/100).toFixed(4)})</span>
